@@ -1,47 +1,142 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Homescreen() {
+  const navigation = useNavigation();
+
+  const goToCartScreen = () => {
+    navigation.navigate('Cart'); 
+
+  };
   return (
     <View style={styles.container}>
 
-        <View style={styles.Section1}>
+        <ScrollView>
 
-            <View>
-            <Image style={styles.MenuIcon} source={require('./assets/Menu.png')} />
-            </View>
+                <View style={styles.Section1}>
 
-            <View>
-            <Image  style={styles.LogoIcon} source={require('./assets/Logo.png')} />
-            </View>
+                  <View>
+                  <Image style={styles.MenuIcon} source={require('./assets/Menu.png')} />
+                  </View>
 
-            <View style={styles.BagandSearch}>
-            <Image style={styles.SearchIcon} source={require('./assets/Search.png')} />
-            <Image  style={styles.Bag} source={require('./assets/shoppingBag.png')} />
-            </View>
+                  <View>
+                  <Image  style={styles.LogoIcon} source={require('./assets/Logo.png')} />
+                  </View>
 
-        </View>
+                  <View style={styles.BagandSearch}>
+                  <Image style={styles.SearchIcon} source={require('./assets/Search.png')} />
+                  
+                  <TouchableOpacity onPress={goToCartScreen}>
+                  <Image  style={styles.Bag} source={require('./assets/shoppingBag.png')} />
+                  </TouchableOpacity>
+                  
+                  </View>
 
-        <View style={styles.Section2}>
+                </View>
 
-            <View>
-              <Text style={styles.OurStory}>O U R  S T O R Y</Text>
-            </View>
+                <View style={styles.Section2}>
 
-            <View style={styles.Filters}>
-              <View style={styles.Ellipse}>
-              <Image  style={styles.listIcon}source={require('./assets/list.png')} />
-              </View>
+                  <View>
+                    <Text style={styles.OurStory}>O U R  S T O R Y</Text>
+                  </View>
 
-              <View style={styles.Ellipse}>
-              <Image style={styles.filterIcon} source={require('./assets/filter.png')} />
-              </View>
-            
-            </View>
+                  <View style={styles.Filters}>
+                    <View style={styles.Ellipse}>
+                    <Image  style={styles.listIcon}source={require('./assets/list.png')} />
+                    </View>
 
-        </View>
+                    <View style={styles.Ellipse}>
+                    <Image style={styles.filterIcon} source={require('./assets/filter.png')} />
+                    </View>
+
+                  </View>
+
+                </View>
 
 
+                <View style={styles.Section3}> 
+
+                  <View style={styles.Section3template}>
+                  <Image style={styles.dress} source={require('./assets/dress1.png')} />
+                  <Text style={styles.Name}>Office Wear</Text>
+                  <Text style={styles.style}>reversible angora cardigan</Text>
+                  <Text style={styles.Price}>$120</Text>
+                  <Image style={styles.addImage}  source={require('./assets/add_circle.png')} />
+                  </View>
+
+                  <View>
+                  <Image style={styles.dress} source={require('./assets/dress2.png')} />
+                  <Text style={styles.Name}>Black</Text>
+                  <Text style={styles.style}>reversible angora cardigan</Text>
+                  <Text style={styles.Price}>$120</Text>
+                  <Image style={styles.addImage}  source={require('./assets/add_circle.png')} />
+                  </View>
+
+                </View>
+
+                <View style={styles.Section3}> 
+
+                  <View style={styles.Section3template}>
+                  <Image style={styles.dress} source={require('./assets/dress3.png')} />
+                  <Text style={styles.Name}>Church Wear</Text>
+                  <Text style={styles.style}>reversible angora cardigan</Text>
+                  <Text style={styles.Price}>$120</Text>
+                  <Image style={styles.addImage}  source={require('./assets/add_circle.png')} />
+                  </View>
+
+                  <View>
+                  <Image style={styles.dress} source={require('./assets/dress4.png')} />
+                  <Text style={styles.Name}>Lamerei</Text>
+                  <Text style={styles.style}>reversible angora cardigan</Text>
+                  <Text style={styles.Price}>$120</Text>
+                  <Image style={styles.addImage}  source={require('./assets/add_circle.png')} />
+                  </View>
+
+                </View>
+
+                <View style={styles.Section3}> 
+
+                  <View style={styles.Section3template}>
+                  <Image style={styles.dress} source={require('./assets/dress5.png')} />
+                  <Text style={styles.Name}>21WN</Text>
+                  <Text style={styles.style}>reversible angora cardigan</Text>
+                  <Text style={styles.Price}>$120</Text>
+                  <Image style={styles.addImage}  source={require('./assets/add_circle.png')} />
+                  </View>
+
+                  <View>
+                  <Image style={styles.dress} source={require('./assets/dress6.png')} />
+                  <Text style={styles.Name}>Lopo</Text>
+                  <Text style={styles.style}>reversible angora cardigan</Text>
+                  <Text style={styles.Price}>$120</Text>
+                  <Image style={styles.addImage}  source={require('./assets/add_circle.png')} />
+                  </View>
+
+                </View>
+
+                <View style={styles.Section3}> 
+
+                  <View style={styles.Section3template}>
+                  <Image style={styles.dress} source={require('./assets/dress7.png')} />
+                  <Text style={styles.Name}>21WN</Text>
+                  <Text style={styles.style}>reversible angora cardigan</Text>
+                  <Text style={styles.Price}>$120</Text>
+                  <Image style={styles.addImage}  source={require('./assets/add_circle.png')} />
+                  </View>
+
+                  <View>
+                  <Image style={styles.dress} source={require('./assets/dress3.png')} />
+                  <Text style={styles.Name}>lame</Text>
+                  <Text style={styles.style}>reversible angora cardigan</Text>
+                  <Text style={styles.Price}>$120</Text>
+                  <Image style={styles.addImage}  source={require('./assets/add_circle.png')} />
+                  </View>
+
+                </View>
+
+
+        </ScrollView>
       
     </View>
   );
@@ -51,6 +146,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    marginTop:30,
   },
   Section1: {
     display:'flex',
@@ -110,5 +206,29 @@ const styles = StyleSheet.create({
     borderRadius:50,
     justifyContent:'center',
     alignItems:'center',
+  },
+  Section3: {
+    display:'flex',
+    flexDirection:'row',
+    marginTop:20,
+  },
+  Section3template: {
+    marginRight:10,
+    marginLeft:10,
+  },
+  addImage: {
+    top:-102,
+    left:135,
+  },
+  Name: {
+    fontSize:15,
+    marginTop:5,
+  },
+  style: {
+    color:'#838282',
+  },
+  Price: {
+    color:'#ff735b',
+    fontSize:20,
   }
 });
