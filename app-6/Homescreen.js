@@ -135,9 +135,13 @@ export default function Homescreen() {
 
                 </View>
 
+              
+  
 
         </ScrollView>
-      
+
+
+               
     </View>
   );
 }
@@ -211,6 +215,7 @@ const styles = StyleSheet.create({
     display:'flex',
     flexDirection:'row',
     marginTop:20,
+    marginBottom:-20,
   },
   Section3template: {
     marginRight:10,
@@ -230,5 +235,6 @@ const styles = StyleSheet.create({
   Price: {
     color:'#ff735b',
     fontSize:20,
-  }
+  },
+ 
 });
