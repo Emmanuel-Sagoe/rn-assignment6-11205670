@@ -73,7 +73,7 @@ export default function Cartscreen() {
 
                 <View style={styles.Section5}>
                 <Image  style={styles.shoppingBag} source={require('./assets/shoppingBag.png')} />
-                <Text style={styles.checkout}>CHECKOUT</Text>
+                <Text style={styles.checkout2}>CHECKOUT</Text>
                 </View>
 
         </ScrollView>
@@ -182,7 +182,7 @@ Section4: {
     tintColor:'white',
     marginRight:20,
   },
-  checkout: {
+  checkout2: {
     color:'white', 
     fontSize:20,
   }
